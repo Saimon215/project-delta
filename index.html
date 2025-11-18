@@ -4,6 +4,10 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tiny Search Fixer — CIS 376</title>
+  <meta
+    name="description"
+    content="CIS 376 interface improvement project that fixes tiny mobile search boxes by turning search terms into editable bubbles."
+  />
 
   <!-- Favicon (prevents favicon 404 in console) -->
   <link rel="icon" type="image/png" href="favicon.png" />
@@ -11,7 +15,10 @@
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap"
+    rel="stylesheet"
+  />
 
   <!-- Bootstrap 5 -->
   <link
@@ -37,7 +44,12 @@
         <i class="bi bi-search"></i> Tiny Search Fixer
       </a>
       <div class="ms-auto">
-        <a class="nav-link text-light" href="https://github.com/Saimon215/project-delta" target="_blank">
+        <a
+          class="nav-link text-light"
+          href="https://github.com/Saimon215/project-delta"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           View Source Code
         </a>
       </div>
@@ -48,7 +60,9 @@
   <main class="py-5">
     <div class="container">
       <header class="mb-5 text-center">
-        <p class="text-uppercase text-muted mb-1 small">CIS 376 — Interface Improvement</p>
+        <p class="text-uppercase text-muted mb-1 small">
+          CIS 376 — Interface Improvement
+        </p>
         <h1 class="fw-bold mb-3">Fixing Tiny Mobile Search Boxes</h1>
         <p class="lead">
           User story: As a mobile user, I want a larger, smarter search box so that I can
@@ -57,7 +71,7 @@
       </header>
 
       <!-- PROBLEM / SOLUTION CARDS -->
-      <section class="row g-4 mb-5">
+      <section class="row g-4 mb-5" aria-label="Problem and solution comparison">
         <!-- Problem card -->
         <article class="col-md-6">
           <div class="card h-100 shadow-sm">
@@ -75,10 +89,13 @@
                 <li>Requires several taps / long-press to select and delete words</li>
               </ul>
 
-              <!-- screenshot -->
+              <!-- Screenshot of bad UX -->
               <figure class="mt-3">
-                <img src="bad-ux.png" class="img-fluid rounded border"
-                     alt="Screenshot of a tiny mobile search input" />
+                <img
+                  src="bad-ux.png"
+                  class="img-fluid rounded border"
+                  alt="Screenshot of a tiny mobile search input above a full keyboard"
+                />
                 <figcaption class="mt-2 small text-muted">
                   Example of the “before” design: long text inside a tiny search field.
                 </figcaption>
@@ -146,20 +163,31 @@
                       id="search-input"
                       class="form-control"
                       placeholder="Example: used delica van diesel awd"
+                      aria-describedby="search-help"
                       required
                     />
-                    <button class="btn btn-outline-secondary" id="create-bubbles-btn" type="button">
+                    <button
+                      class="btn btn-outline-secondary"
+                      id="create-bubbles-btn"
+                      type="button"
+                    >
                       Create Bubbles
                     </button>
                   </div>
-                  <div class="form-text">
+                  <div class="form-text" id="search-help">
                     Tip: Try a long phrase, then remove or toggle a few words using the bubbles.
                   </div>
                 </form>
 
                 <div>
-                  <h3 class="h6 text-uppercase text-muted mb-2">Search terms as bubbles</h3>
-                  <div id="bubble-container" class="d-flex flex-wrap gap-2 mb-3" aria-live="polite">
+                  <h3 class="h6 text-uppercase text-muted mb-2">
+                    Search terms as bubbles
+                  </h3>
+                  <div
+                    id="bubble-container"
+                    class="d-flex flex-wrap gap-2 mb-3"
+                    aria-live="polite"
+                  >
                     <!-- bubbles injected by JS -->
                   </div>
                 </div>
@@ -214,15 +242,26 @@ Run 3 — 9 clicks in 11.2s (active terms: "used, delica, diesel")
 
   <!-- FOOTER -->
   <footer class="py-4 mt-5 border-top bg-body-tertiary">
-    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+    <div
+      class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2"
+    >
       <p class="mb-0 small">
         &copy; 2025 Tiny Search Fixer — Built for CIS 376.
       </p>
       <div class="small">
-        <a href="https://github.com/Saimon215" target="_blank" class="me-3">
+        <a
+          href="https://github.com/Saimon215"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="me-3"
+        >
           <i class="bi bi-github"></i> GitHub Profile
         </a>
-        <a href="https://github.com/Saimon215/project-delta" target="_blank">
+        <a
+          href="https://github.com/Saimon215/project-delta"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <i class="bi bi-code-slash"></i> View Repo
         </a>
       </div>
@@ -233,10 +272,10 @@ Run 3 — 9 clicks in 11.2s (active terms: "used, delica, diesel")
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous">
-  </script>
+    crossorigin="anonymous"
+  ></script>
 
-  <!-- Our App -->
+  <!-- Our App (ES module for metrics bonus) -->
   <script type="module" src="app.js"></script>
 </body>
 </html>
