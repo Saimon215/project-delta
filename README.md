@@ -129,9 +129,8 @@ project-delta/
 ├── app.js
 ├── metrics.js
 ├── README.md
-└── asset/
-    ├── bad-ux.png
-    └── favicon.png
+├── bad-ux.png
+└── favicon.png
 ```
 
 ## Bonus Items (Required to Get Bonus Points)
