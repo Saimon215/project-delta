@@ -1,6 +1,5 @@
 // metrics.js
-// Simple metrics module: exports logRunMetric for reuse.
-// This satisfies the "module export" bonus requirement.
+
 
 export function logRunMetric(runNumber, clickCount, elapsedMs, activeTerms) {
   const seconds = (elapsedMs / 1000).toFixed(1);
@@ -21,7 +20,7 @@ export function logRunMetric(runNumber, clickCount, elapsedMs, activeTerms) {
       timestamp: new Date().toISOString(),
     };
 
-    // Try/catch here satisfies the "try/catch" bonus nicely
+    // Try/catch here satisfies the "try/catch" 
     localStorage.setItem("tinySearchFixer:lastRun", JSON.stringify(payload));
   } catch (error) {
     // In case localStorage is blocked or JSON fails
