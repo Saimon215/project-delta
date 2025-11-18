@@ -132,8 +132,8 @@ project-delta/
 └── asset/
     ├── bad-ux.png
     └── favicon.png
+```
 
----
 ## Bonus Items (Required to Get Bonus Points)
 I completed these and closed GitHub Issues for each:
 
