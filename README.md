@@ -122,14 +122,15 @@ https://wave.webaim.org/report#/https://saimon215.github.io/project-delta/
 ---
 ## Repo Structure
 
--index.html
--styles.css
--app.js
--metrics.js
--README.md
--asset/
-   bad-ux.png
-   favicon.png
+project-delta/
+│ index.html
+│ styles.css
+│ app.js
+│ metrics.js
+│ README.md
+└── asset/
+      bad-ux.png
+      favicon.png
 
 ---
 ## Bonus Items (Required to Get Bonus Points)
