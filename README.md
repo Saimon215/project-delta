@@ -30,6 +30,7 @@ Many apps use a tiny search bar that:
 **Screenshot:**  
 I used `bad-ux.png` to show the tiny mobile search box.
 
+![Bad mobile search bar](bad-ux.png)
 ---
 
 ## After (Improved Design)
