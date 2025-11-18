@@ -6,79 +6,155 @@
 ---
 
 ## Purpose
-This project is a UX improvement case study that redesigns the extremely small,
-difficult-to-edit search boxes found in many mobile browsers and shopping apps.
-Long text inside a tiny input field is frustrating to edit, especially when the
-user must place the cursor precisely, correct typos, or toggle specific words.
-
-The goal of this app is to demonstrate a **clear, measurable improvement** by
-converting search terms into **tappable bubbles** and tracking the
-effectiveness (clicks + time).
+This project fixes a common bad design: very small mobile search bars that are hard to edit.  
+My improved design turns each word into a bubble you can tap, remove, or toggle.  
+This makes editing long search phrases much faster and easier.
 
 ---
 
 ## User Story
-> **As a mobile user,**  
-> I want a larger, smarter search box  
-> **so that** I can edit my search terms with fewer taps and less time.
+As a mobile user,  
+I want a bigger and smarter search box  
+so I can edit my search terms with fewer taps and less time.
 
 ---
 
-## Problem Summary (Before)
-Mobile search bars often:
-- Use extremely small input boxes
-- Make long phrases hard to read and edit
-- Require multiple taps/long-presses to select or delete text
-- Have tiny cursor targets that are difficult to use
-- Hide text when it overflows the input field
+## Before (Bad Design)
+Many apps use a tiny search bar that:
 
-These issues add **friction** and slow down simple tasks.
+- Is too small  
+- Cuts off long text  
+- Is hard to click in the right spot  
+- Takes many taps to fix mistakes  
 
----
-
-## Solution Summary (After)
-This prototype improves the interface by:
-- Using a full-width, tall search field
-- Breaking search terms into visual **bubbles/chips**
-- Allowing each bubble to be activated, deactivated, or removed with a single tap
-- Providing a clear UI state without needing cursor placement
-- Logging **click count** and **elapsed time** to show measurable improvement
-
-Users can now edit long searches much faster and with lower cognitive load.
+**Screenshot:**  
+I used `bad-ux.png` to show the tiny mobile search box.
 
 ---
 
-## Test Case (Required)
-**Scenario:**  
-Edit a long search phrase where the user must remove or modify multiple terms.
+## After (Improved Design)
+My improved design:
 
-Examples:
-- “used delica van diesel awd”
-- “cheap hotel near airport free breakfast”
+- Uses a big, easy-to-tap search box  
+- Turns each word into a bubble  
+- You can tap a bubble to activate or deactivate it  
+- You can press × to delete a bubble  
+- No cursor placement needed  
+- Tracks clicks and time to prove improvement  
 
-### **Baseline (Bad UI)**
-Editing inside tiny text boxes often requires:
-- long-press → drag → adjust cursor → delete → retype  
-- multiple taps  
-- multiple seconds to find & fix the right words  
+This design is faster, clearer, and easier to use.
 
-### **Prototype (Improved UI)**
-- Search terms become selectable **bubbles**
-- Toggle a bubble = 1 tap  
-- Delete a term = 1 tap  
-- Remove the need for precise cursor placement  
+---
+
+## Test Case
+**Scenario:** Edit a long phrase like:  
+`used delica van diesel awd`
+
+### Bad UI:
+- You must long-press  
+- Move cursor  
+- Delete manually  
+- Takes many taps  
+
+### Improved UI:
+- Tap bubble = ON/OFF  
+- Click × to delete  
+- Much faster  
 
 ---
 
 ## Metric for Success
-The app records:
-- Total **click count**
-- Total **elapsed time** (ms → seconds)
+The app shows:
 
-Metrics print in the DevTools console, for example:
+- How many clicks you used  
+- How long it took
+## Metrics Outpu Example 
+It prints results to the browser console like this:
+--
+Run 1 — 7 clicks in 6.4s (active terms: "used, delica")
+Run 2 — 5 clicks in 4.9s (active terms: "diesel")
 
-```text
-Run 3 — 9 clicks in 11.2s (active terms: "used, delica, diesel")
-```
 
-Check the console after each run to compare click count and time.
+## GitHub Pages Link
+`https://saimon215.github.io/project-delta/`
+
+
+---
+
+## Validation Links
+https://saimon215.github.io/project-delta/
+
+**Nu HTML Validator:**  
+https://validator.w3.org/nu/?doc=https://saimon215.github.io/project-delta/
+
+**WAVE Accessibility:**  
+https://wave.webaim.org/report#/https://saimon215.github.io/project-delta/
+
+---
+
+## Tech Used
+- HTML  
+- CSS  
+- JavaScript  
+- ES Module (metrics.js)  
+- Bootstrap 5  
+- Bootstrap Icons  
+- Google Fonts  
+
+
+---
+## Architecture
+- index.html — main UI + before/after explanation  
+- styles.css — custom styles for layout & bubbles  
+- app.js — UI logic, bubble creation, interactions  
+- metrics.js — ES module for logging metrics (with try/catch)  
+- asset/ — bad UX screenshot + favicon
+
+ ---
+
+## Attribution
+- **Author:** Saimon Hasan  
+- Used Bootstrap docs and MDN for references  
+- **AI Help:** ChatGPT (GPT-5.1) helped with planning, code ideas, and README writing  
+- All final code was checked and edited by me
+  
+
+---
+## Repo Structure
+index.html
+styles.css
+app.js
+metrics.js
+README.md
+asset/
+   bad-ux.png
+   favicon.png
+
+---
+## Bonus Items (Required to Get Bonus Points)
+I completed these and closed GitHub Issues for each:
+
+- **Text-based App (+5)**
+- **Click + Time Metrics (+5)**
+- **Module Export (metrics.js) (+3)**
+- **try/catch around localStorage (+3)**
+- **Favicon added, no 404 error (+3)**
+
+Total bonus: **+19 points**
+
+## How to Run
+1. Open the GitHub Pages link: https://saimon215.github.io/project-delta/
+2. Type a search phrase into the big input.
+3. Click "Create Bubbles".
+4. Tap bubbles or delete them.
+5. Press "Run Search".
+6. Open DevTools → Console to see click/time metrics.
+   
+## Final Notes
+This project shows:
+
+- UX redesign  
+- Before/after improvement  
+- JavaScript interactivity  
+- Clean layout  
+- Performance measurement  
